@@ -9,9 +9,9 @@
         <priority>0.9</priority>
     </url>
     {% for repo in site.github.public_repositories %}
-      {% if repo.html_url %}
+      {% if repo.html_url and not repo.fork and repo.has_pages %}
     <url>
-        <loc>{{ repo.html_url }}</loc>
+        <loc>{{ site.url }}/{{ repo.name }}</loc>
         <lastmod>{{ repo.pushed_at }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
