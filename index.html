@@ -298,9 +298,18 @@
             function(data) {
               var release = data[0];
               if(release.html_url) {
-                e.html('<a href="' + release.html_url + '">' + release.name + '</a>');
+                var date = new Date(release.published_at);
+                var days_ago = Math.floor((new Date() - date) / (24 * 3600 * 1000));
+                e.html('<a href="' + release.html_url + '">' + release.name + '</a> ' +
+                       '(' + days_ago + ' days ago)');
               } else {
-                e.html(release.name);
+                var url = release.commit.url;
+                $.get(url, function(data) {
+                  var date = new Date(data.commit.committer.date);
+                  var days_ago = Math.floor((new Date() - date) / (24 * 3600 * 1000));
+                  e.html('<a href="' + data.html_url + '">' + release.name + '</a> ' +
+                         '(' + days_ago + ' days ago)');
+                });
               }
             }
           );
