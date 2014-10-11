@@ -6,15 +6,13 @@
     <meta charset="utf-8">
     <meta name=viewport content="width=device-width, initial-scale=1">
     <link rel="canonical" href="{{ site.url }}">
-    <title>urdh github projects</title>
+    <title>Simon Sigurdhsson's Github projects</title>
     <meta name="robots" content="NOODP">
     <!-- OGP, twitter card, schema.org? -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
       /* http://clrs.cc */
       @import url(//fonts.googleapis.com/css?family=Lato:300italic,400,700);
-      /*@import url(//fonts.googleapis.com/css?family=Source+Code+Pro:300);*/
-      /* Decide on these fonts later */
       body {
         padding-top: 5rem;
         font-family: Lato, sans-serif;
@@ -26,12 +24,23 @@
       a:hover {
         color: #39CCCC;
       }
+      a[href^='#'] {
+        color: #001F3F !important;
+      }
+      a[href^='#']:hover {
+        color: #0074D9 !important;
+      }
 
       body>header, body>p, body>footer,
       section>h2, section>p {
         width: 30rem;
         margin-left: auto;
         margin-right: auto;
+      }
+      body>header p {
+        font-style: italic;
+        text-align: center;
+        margin-top: -1rem;
       }
       body>footer {
         font-style: italic;
@@ -73,11 +82,16 @@
       }
     </style>
   </head>
-  <body>
+  <body class="sweet-hyphens">
+    <!-- TODO: schema.org/RDF/XFN markup like the blog does -->
+
     <header>
-    <h1>urdh github projects</h1>
+      <h1>Github projects</h1>
+      <p>Simon Sigurdhsson's Github projects</p>
     </header>
-    <p>...</p>
+
+    <p>This page lists my public Github projects, including both <a href="#major">large</a> maintained “software” repositories as well as <a href="#minor">smaller</a> experimental or toy projects as well as <a href="#abandoned">abandoned</a> stuff. It also lists some of my <a href="#contrib">contributions</a> to other projects on Github.</p>
+    <p>If you're looking for more information about me, visit <a href="http://sigurdhsson.org/">my online business card</a>. I also (kind of) operate <a href="http://blog.sigurdhsson.org/">a blog</a>.</p>
 
     <section id="major">
       <h2>Major projects</h2>
@@ -88,7 +102,8 @@
           <h3><a href="/dotfiles">dotfiles</a></h3>
           <p>A <span class="language">Ruby</span> project.</p>
         </header>
-        <p>...</p>
+        <p>This is my attempt to organize, version-control and share my dotfiles across systems I use. It is inspired by <a href="https://github.com/holman/dotfiles">holman's dotfiles</a>, but is written from scratch. The main setup is a ruby program and a small DSL describing a set of “rules” dictating how dotfiles are copies, symlinked or combined.</p>
+        <p>The repository also contains a bunch of my dotfiles.</p>
         <footer>
           <p><a href="http://github.com/urdh/dotfiles">On Github</a>.</p>
         </footer>
@@ -99,7 +114,8 @@
           <h3><a href="/latexbok">latexbok</a></h3>
           <p>A <span class="language">TeX</span> project.</p>
         </header>
-        <p>...</p>
+        <p>The “LaTeXbok” is an introductory book about LaTeX written in Swedish. It was originally aimed at students attending the Engineering Physics and Engineering Mathematics programmes at Chalmers, but it is a complete introduction to LaTeX and should be equally useful to other people as well.</p>
+        <p>Unlike some other LaTeX introductions, the book describes modern best practices and relatively up-to-date packages, which means you won't have to unlearn a bunch of stuff when you discover the TeX community.</p>
         <footer>
           <p><a href="http://github.com/urdh/latexbok">On Github</a>. Latest release: <span class="release" data-repo-name="urdh/latexbok" data-release-type="release">n/a</span>.</p>
         </footer>
@@ -271,6 +287,7 @@
       <p>These are my <a href="http://github.com">Github</a> projects. I also have <a href="http://blog.sigurdhsson.org/">a blog</a> and <a href="http://sigurdhsson.org/">an online business card</a>.</p>
     </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/sweet-justice.min.js"></script>
     <script>
       $(function() {
         // Get latest release
