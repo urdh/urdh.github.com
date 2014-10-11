@@ -45,7 +45,7 @@
         </header>
         <p>...</p>
         <footer>
-          <p><a href="http://github.com/urdh/latexbok">On Github</a>. Latest release: <span class="release" data-repo-name="urdh/latexbok">n/a</span>.</p>
+          <p><a href="http://github.com/urdh/latexbok">On Github</a>. Latest release: <span class="release" data-repo-name="urdh/latexbok" data-release-type="release">n/a</span>.</p>
         </footer>
       </article>
 
@@ -56,7 +56,7 @@
         </header>
         <p>...</p>
         <footer>
-          <p><a href="http://github.com/urdh/skdoc">On Github</a>. Latest release: <span class="release" data-repo-name="urdh/skdoc">n/a</span>.</p>
+          <p><a href="http://github.com/urdh/skdoc">On Github</a>. Latest release: <span class="release" data-repo-name="urdh/skdoc" data-release-type="release">n/a</span>.</p>
         </footer>
       </article>
 
@@ -67,7 +67,7 @@
         </header>
         <p>...</p>
         <footer>
-          <p><a href="http://github.com/urdh/skmath">On Github</a>. Latest release: <span class="release" data-repo-name="urdh/skmath">n/a</span>.</p>
+          <p><a href="http://github.com/urdh/skmath">On Github</a>. Latest release: <span class="release" data-repo-name="urdh/skmath" data-release-type="release">n/a</span>.</p>
         </footer>
       </article>
 
@@ -78,7 +78,7 @@
         </header>
         <p>...</p>
         <footer>
-          <p><a href="http://github.com/urdh/skrapport">On Github</a>. Latest release: <span class="release" data-repo-name="urdh/skrapport">n/a</span>.</p>
+          <p><a href="http://github.com/urdh/skrapport">On Github</a>. Latest release: <span class="release" data-repo-name="urdh/skrapport" data-release-type="release">n/a</span>.</p>
         </footer>
       </article>
     </section>
@@ -94,7 +94,7 @@
         </header>
         <p>...</p>
         <footer>
-          <p><a href="http://github.com/urdh/chs-msc-thesis">On Github</a>. Latest release: <span class="release" data-repo-name="urdh/chs-msc-thesis">n/a</span>.</p>
+          <p><a href="http://github.com/urdh/chs-msc-thesis">On Github</a>. Latest release: <span class="release" data-repo-name="urdh/chs-msc-thesis" data-release-type="release">n/a</span>.</p>
         </footer>
       </article>
 
@@ -105,7 +105,7 @@
         </header>
         <p>...</p>
         <footer>
-          <p><a href="http://github.com/urdh/download">On Github</a>. Latest release: <span class="release" data-repo-name="urdh/download">n/a</span>.</p>
+          <p><a href="http://github.com/urdh/download">On Github</a>. Latest release: <span class="release" data-repo-name="urdh/download" data-release-type="release">n/a</span>.</p>
         </footer>
       </article>
 
@@ -127,7 +127,7 @@
         </header>
         <p>...</p>
         <footer>
-          <p><a href="http://github.com/urdh/streck">On Github</a>. Latest release: <span class="release" data-repo-name="urdh/streck">n/a</span>.</p>
+          <p><a href="http://github.com/urdh/streck">On Github</a>. Latest release: <span class="release" data-repo-name="urdh/streck" data-release-type="tag">n/a</span>.</p>
         </footer>
       </article>
 
@@ -195,7 +195,7 @@
         </header>
         <p>...</p>
         <footer>
-          <p><a href="http://github.com/urdh/chscite">On Github</a>. Latest release: <span class="release" data-repo-name="urdh/chscite">n/a</span>.</p>
+          <p><a href="http://github.com/urdh/chscite">On Github</a>. Latest release: <span class="release" data-repo-name="urdh/chscite" data-release-type="tag">n/a</span>.</p>
         </footer>
       </article>
 
@@ -216,7 +216,23 @@
     </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
-    
+      $(function() {
+        // Get latest release
+        $('.release').each(function() {
+          var e = $(this);
+          var api_req = 'repos/' + e.data('repo-name') + '/' + e.data('release-type') + 's';
+          $.get('https://api.github.com/' + api_req,
+            function(data) {
+              var release = data[0];
+              if(release.html_url) {
+                e.html('<a href="' + release.html_url + '">' + release.name + '</a>');
+              } else {
+                e.html(release.name);
+              }
+            }
+          );
+        });
+      });
     </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
