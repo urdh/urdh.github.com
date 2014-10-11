@@ -8,6 +8,7 @@ require 'open-uri'
 require 'html/proofer'
 
 IGNORED_FILES = [
+  '_site/sweet-justice.min.js'
 ]
 
 # Hack: w3c_validators doesn't provide a generic XML validator.
