@@ -80,6 +80,11 @@
       .project footer p {
         margin-bottom: 0;
       }
+      blockquote {
+        font-style: italic;
+        margin-left: 3ex;
+        margin-right: 3ex;
+      }
     </style>
   </head>
   <body class="sweet-hyphens">
@@ -224,8 +229,8 @@
           <h3>atom-latex</h3>
           <p>A <span class="language">CoffeeScript</span> project.</p>
         </header>
-        <p>...</p>
-        <p>My contributions include...</p>
+        <p>This is a package for the Atom.io text editor implementing a few basic LaTeX-related features such as in-editor compilation and SyncTeX support.</p>
+        <p>My (as yet unmerged) contributions mainly concern the SyncTeX implementation.</p>
         <footer>
           <p><a href="http://github.com/thomasjo/atom-latex">On Github</a>.</p>
         </footer>
@@ -236,8 +241,8 @@
           <h3>cpulimit</h3>
           <p>A <span class="language">C</span> project.</p>
         </header>
-        <p>...</p>
-        <p>My contributions include...</p>
+        <blockquote><p>Cpulimit is a tool which limits the CPU usage of a process (expressed in percentage, not in CPU time). It is useful to control batch jobs, when you don't want them to eat too many CPU cycles. The goal is prevent a process from running for more than a specified time ratio. It does not change the nice value or other scheduling priority settings, but the real CPU usage. Also, it is able to adapt itself to the overall system load, dynamically and quickly.</p></blockquote>
+        <p><a href="https://github.com/opsengine/cpulimit/commits?author=urdh">My contributions</a> introduced support for OS X.</p>
         <footer>
           <p><a href="http://github.com/opsengine/cpulimit">On Github</a>.</p>
         </footer>
@@ -248,8 +253,8 @@
           <h3><a href="http://brew.sh/">Homebrew</a></h3>
           <p>A <span class="language">Ruby</span> project.</p>
         </header>
-        <p>...</p>
-        <p>My contributions include...</p>
+        <blockquote><p>The missing package manager for OS X.</p></blockquote>
+        <p>My contributions are <a href="https://github.com/Homebrew/homebrew/commits?author=urdh">mostly new formulae</a>, but also include <a href="https://github.com/Homebrew/homebrew/commit/6bbb92f1385726f05f970ed6aef3dc49d230b73c">doctor checks</a>, <a href="https://github.com/Homebrew/homebrew/commit/34cfc378b5d9ef4d762365bc7a851af1f985d7c8">download resumption</a> and <a href="https://github.com/Homebrew/homebrew/commits/master/Library/Homebrew/cmd/pin.rb">the formula pinning feature</a>.</p>
         <footer>
           <p><a href="http://github.com/Homebrew/homebrew">On Github</a>.</p>
         </footer>
@@ -321,6 +326,10 @@
               }
             }
           );
+        });
+        // Add pull quote quotes
+        $('blockquote').each(function() {
+          $(this).prepend('<i class="fa fa-quote-left fa-lg pull-left"></i>');
         });
       });
     </script>
