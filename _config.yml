@@ -1,0 +1,29 @@
+safe: true
+name: 'urdh: projects on github'
+url: http://projects.sigurdhsson.org
+
+timezone: Europe/Stockholm
+encoding: utf-8
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+highlighter: pygments
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: pages
+    values:
+      layout: null
+
+exclude:
+  - .travis.yml
+  - validate.rb
+  - README.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
