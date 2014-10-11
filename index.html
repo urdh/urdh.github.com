@@ -296,13 +296,21 @@
           var api_req = 'repos/' + e.data('repo-name') + '/' + e.data('release-type') + 's';
           $.get('https://api.github.com/' + api_req,
             function(data) {
-              var release = data[0];
-              if(release.html_url) {
-                var date = new Date(release.published_at);
+              if(data[0].html_url) {
+                var release = data[0];
+                for(var i=0; i < data.length; i++) {
+                  if(new Date(data[i].created_at) > new Date(release.created_at)) {
+                    release = data[i];
+                  }
+                }
+                // We have releases, not tags
+                var date = new Date(release.created_at);
                 var days_ago = Math.floor((new Date() - date) / (24 * 3600 * 1000));
                 e.html('<a href="' + release.html_url + '">' + release.name + '</a> ' +
                        '(' + days_ago + ' days ago)');
               } else {
+                // We just have tags :(
+                var release = data[0];
                 var url = release.commit.url;
                 $.get(url, function(data) {
                   var date = new Date(data.commit.committer.date);
