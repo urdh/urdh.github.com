@@ -12,9 +12,65 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
       /* http://clrs.cc */
-      @import url(//fonts.googleapis.com/css?family=Raleway:400,600);
-      @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300);
+      @import url(//fonts.googleapis.com/css?family=Lato:300italic,400,700);
+      /*@import url(//fonts.googleapis.com/css?family=Source+Code+Pro:300);*/
       /* Decide on these fonts later */
+      body {
+        padding-top: 5rem;
+        font-family: Lato, sans-serif;
+        color: #111111;
+      }
+      a {
+        color: #85144B;
+      }
+      a:hover {
+        color: #39CCCC;
+      }
+
+      body>header, body>p, body>footer,
+      section>h2, section>p {
+        width: 30rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      body>footer {
+        font-style: italic;
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+      }
+
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        margin-top: 3rem;
+      }
+
+      .project {
+        width: 30rem;
+        background: #F9F9F9;
+        border: 1px solid #DDDDDD;
+        padding: 1ex;
+        margin: 2ex auto;
+      }
+      .project header {
+
+      }
+      .project header h3 {
+        margin-top: 0;
+        margin-bottom: .5ex;
+      }
+      .project header p {
+        margin-top: .5ex;
+        font-size: smaller;
+      }
+      .project footer {
+        font-size: smaller;
+        font-style: italic;
+      }
+      .project footer p {
+        margin-bottom: 0;
+      }
     </style>
   </head>
   <body>
@@ -30,7 +86,7 @@
       <article class="project">
         <header>
           <h3><a href="/dotfiles">dotfiles</a></h3>
-          <p>A <span class="lanugage">Ruby</span> project.</p>
+          <p>A <span class="language">Ruby</span> project.</p>
         </header>
         <p>...</p>
         <footer>
@@ -41,7 +97,7 @@
       <article class="project">
         <header>
           <h3><a href="/latexbok">latexbok</a></h3>
-          <p>A <span class="lanugage">TeX</span> project.</p>
+          <p>A <span class="language">TeX</span> project.</p>
         </header>
         <p>...</p>
         <footer>
@@ -52,7 +108,7 @@
       <article class="project">
         <header>
           <h3><a href="/skdoc">skdoc</a></h3>
-          <p>A <span class="lanugage">TeX</span> project.</p>
+          <p>A <span class="language">TeX</span> project.</p>
         </header>
         <p>...</p>
         <footer>
@@ -63,7 +119,7 @@
       <article class="project">
         <header>
           <h3><a href="/skmath">skmath</a></h3>
-          <p>A <span class="lanugage">TeX</span> project.</p>
+          <p>A <span class="language">TeX</span> project.</p>
         </header>
         <p>...</p>
         <footer>
@@ -74,7 +130,7 @@
       <article class="project">
         <header>
           <h3><a href="/skrapport">skrapport</a></h3>
-          <p>A <span class="lanugage">TeX</span> project.</p>
+          <p>A <span class="language">TeX</span> project.</p>
         </header>
         <p>...</p>
         <footer>
@@ -90,7 +146,7 @@
       <article class="project">
         <header>
           <h3>chs-msc-thesis</h3>
-          <p>A <span class="lanugage">TeX</span> project.</p>
+          <p>A <span class="language">TeX</span> project.</p>
         </header>
         <p>...</p>
         <footer>
@@ -101,7 +157,7 @@
       <article class="project">
         <header>
           <h3>download</h3>
-          <p>A <span class="lanugage">TeX</span> project.</p>
+          <p>A <span class="language">TeX</span> project.</p>
         </header>
         <p>...</p>
         <footer>
@@ -112,7 +168,7 @@
       <article class="project">
         <header>
           <h3>r-things</h3>
-          <p>An <span class="lanugage">R</span> project.</p>
+          <p>An <span class="language">R</span> project.</p>
         </header>
         <p>...</p>
         <footer>
@@ -123,7 +179,7 @@
       <article class="project">
         <header>
           <h3>streck</h3>
-          <p>A <span class="lanugage">Python</span> project.</p>
+          <p>A <span class="language">Python</span> project.</p>
         </header>
         <p>...</p>
         <footer>
@@ -134,7 +190,7 @@
       <article class="project">
         <header>
           <h3>vitae</h3>
-          <p>A <span class="lanugage">TeX</span> project.</p>
+          <p>A <span class="language">TeX</span> project.</p>
         </header>
         <p>...</p>
         <footer>
@@ -150,7 +206,7 @@
       <article class="project">
         <header>
           <h3>atom-latex</h3>
-          <p>A <span class="lanugage">CoffeeScript</span> project.</p>
+          <p>A <span class="language">CoffeeScript</span> project.</p>
         </header>
         <p>...</p>
         <p>My contributions include...</p>
@@ -162,7 +218,7 @@
       <article class="project">
         <header>
           <h3>cpulimit</h3>
-          <p>A <span class="lanugage">C</span> project.</p>
+          <p>A <span class="language">C</span> project.</p>
         </header>
         <p>...</p>
         <p>My contributions include...</p>
@@ -174,7 +230,7 @@
       <article class="project">
         <header>
           <h3><a href="http://brew.sh/">Homebrew</a></h3>
-          <p>A <span class="lanugage">Ruby</span> project.</p>
+          <p>A <span class="language">Ruby</span> project.</p>
         </header>
         <p>...</p>
         <p>My contributions include...</p>
@@ -191,7 +247,7 @@
       <article class="project">
         <header>
           <h3><a href="/chscite">chscite</a></h3>
-          <p>A <span class="lanugage">TeX</span> project.</p>
+          <p>A <span class="language">TeX</span> project.</p>
         </header>
         <p>...</p>
         <footer>
@@ -202,7 +258,7 @@
       <article class="project">
         <header>
           <h3>libgraph64osx</h3>
-          <p>An <span class="lanugage">Objective-C</span> project.</p>
+          <p>An <span class="language">Objective-C</span> project.</p>
         </header>
         <p>...</p>
         <footer>
