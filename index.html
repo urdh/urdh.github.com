@@ -3,20 +3,43 @@
 <!DOCTYPE html>
 <title>urdh github projects</title>
 
-<ul>
-{% for repo in site.github.public_repositories %}
-  {% if repo.html_url and not repo.fork and repo.has_pages %}
-    <li><pre>
-      {% if repo.has_pages %}
-        {{ site.url }}/{{ repo.name }}
-      {% else %}
-        {{ repo.html_url }}
-      {% endif %}
-      {{ repo.name }}
-      {{ repo.description }}
-      {{ repo.language }}
-      {{ repo.pushed_at }}
-    </pre></li>
-  {% endif %}
-{% endfor %}
-</ul>
+<h1>urdh github projects</h1>
+
+<section id="major">
+  <h2>Major projects</h2>
+  <ul>
+    <li>dotfiles</li>
+    <li>latexbok</li>
+    <li>skdoc</li>
+    <li>skmath</li>
+    <li>skrapport</li>
+  </ul>
+</section>
+
+<section id="minor">
+  <h2>Minor projects</h2>
+  <ul>
+    <li>chs-msc-thesis</li>
+    <li>download</li>
+    <li>libgraph64osx</li>
+    <li>r-things</li>
+    <li>streck</li>
+    <li>vitae</li>
+  </ul>
+</section>
+
+<section id="contrib">
+  <h2>Contributions</h2>
+  <ul>
+    <li>atom-latex</li>
+    <li>cpulimit</li>
+    <li>homebrew</li>
+  </ul>
+</section>
+
+<section id="abandoned">
+  <h2>Abandoned projects</h2>
+  <ul>
+    <li>chscite</li>
+  </ul>
+</section>

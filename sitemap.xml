@@ -8,14 +8,46 @@
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
-    {% for repo in site.github.public_repositories %}
-      {% if repo.html_url and not repo.fork and repo.has_pages %}
     <url>
-        <loc>{{ site.url }}/{{ repo.name }}</loc>
-        <lastmod>{{ repo.pushed_at }}</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>{{ site.url }}/chscite</loc>
+        <lastmod>2014-10-11</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
-      {% endif %}
-    {% endfor %}
+    <url>
+        <loc>{{ site.url }}/dotfiles</loc>
+        <lastmod>2014-10-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>{{ site.url }}/latexbok</loc>
+        <lastmod>2014-10-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>{{ site.url }}/skdoc</loc>
+        <lastmod>2014-10-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>{{ site.url }}/skmath</loc>
+        <lastmod>2014-10-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>{{ site.url }}/skrapport</loc>
+        <lastmod>2014-10-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>{{ site.url }}/streck</loc>
+        <lastmod>2014-10-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
 </urlset>
