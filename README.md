@@ -1,11 +1,11 @@
-projects-page
+urdh.github.com
 ===============
 
 This is a github pages page listing all my github projects.
 
 All generated content is validated using a Travis CI setup.
 
-[![Build Status](https://travis-ci.org/urdh/project-pages.svg?branch=gh-pages)](https://travis-ci.org/urdh/project-pages)
+[![Build Status](https://travis-ci.org/urdh/urdh.github.com.svg?branch=master)](https://travis-ci.org/urdh/urdh.github.com)
 
 ## License
 
