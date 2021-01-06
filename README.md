@@ -1,11 +1,11 @@
-urdh.github.com
-===============
+projects
+========
 
-This is a github pages page listing all my github projects.
+This is a Jekyll-based page listing all my github projects.
 
-All generated content is validated using a Travis CI setup.
+All generated content is validated using a GitHub Workflow.
 
-[![Build Status](https://github.com/urdh/urdh.github.com/workflows/Check%20for%20broken%20links/badge.svg)](https://github.com/urdh/urdh.github.com/actions)
+[![Build Status](https://github.com/urdh/projects/workflows/Check%20for%20broken%20links/badge.svg)](https://github.com/urdh/projects/actions)
 
 ## License
 
