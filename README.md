@@ -5,7 +5,7 @@ This is a github pages page listing all my github projects.
 
 All generated content is validated using a Travis CI setup.
 
-[![Build Status](https://travis-ci.org/urdh/urdh.github.com.svg?branch=master)](https://travis-ci.org/urdh/urdh.github.com)
+[![Build Status](https://github.com/urdh/urdh.github.com/workflows/Check%20for%20broken%20links/badge.svg)](https://github.com/urdh/urdh.github.com/actions)
 
 ## License
 
