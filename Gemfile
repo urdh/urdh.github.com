@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 gem 'github-pages', '>= 229'
-gem 'nokogiri', '>= 1.13.4'
+gem 'nokogiri', '>= 1.16.8'
 gem 'html5_validator'
 gem 'w3c_validators', '>= 1.3.6'
 gem 'colorize'
