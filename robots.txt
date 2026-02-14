@@ -25,4 +25,4 @@ User-agent: *
 Disallow: /
 
 # We have a sitemap!
-Sitemap: http://projects.sigurdhsson.org/sitemap.xml
+Sitemap: https://projects.sigurdhsson.org/sitemap.xml
